@@ -142,29 +142,31 @@ const EducationSection = () => {
                 >
                   <div>
                     {/* Top Badges & Logo */}
-                    <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
                       <div className="flex items-center gap-3">
                         <img
                           src={edu.logoImg}
                           alt={edu.logoAlt}
-                          className="h-9 w-auto object-contain"
+                          className="h-8 sm:h-9 w-auto max-w-[130px] sm:max-w-none object-contain shrink-0"
                         />
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 font-mono text-xs font-bold">
+                        <span className="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 font-mono text-xs font-bold shrink-0">
                           <Calendar className="w-3 h-3" />
                           {edu.period}
                         </span>
                       </div>
 
-                      {edu.badgePrimary ? (
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-600 text-white font-mono text-xs font-bold">
-                          <Award className="w-3.5 h-3.5" />
-                          <span>{edu.badge}</span>
-                        </span>
-                      ) : (
-                        <span className="px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 font-mono text-xs font-bold text-emerald-800">
-                          {edu.badge}
-                        </span>
-                      )}
+                      <div className="self-start sm:self-auto">
+                        {edu.badgePrimary ? (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-600 text-white font-mono text-xs font-bold">
+                            <Award className="w-3.5 h-3.5" />
+                            <span>{edu.badge}</span>
+                          </span>
+                        ) : (
+                          <span className="inline-block px-3 py-1 rounded-md bg-emerald-50 border border-emerald-200 font-mono text-xs font-bold text-emerald-800">
+                            {edu.badge}
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     {/* Degree Title */}

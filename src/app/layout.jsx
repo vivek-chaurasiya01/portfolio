@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BackgroundGlow from '../components/common/BackgroundGlow';
+import SpiderWebEcosystem from '../components/SpiderWebEcosystem';
 import ToastProvider from '../components/ToastProvider';
 
 export const metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="min-h-screen bg-white text-gray-900 selection:bg-emerald-600 selection:text-white overflow-x-hidden font-sans relative flex flex-col justify-between">
         <BackgroundGlow />
+        <SpiderWebEcosystem />
         <Navbar />
         <main className="relative z-10 flex-1 pt-20 sm:pt-24">
           {children}

@@ -31,6 +31,12 @@ const Hero = () => {
   }, { scope: heroRef });
 
   const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/Vievk_Resume (4).pdf';
+    link.download = 'Vivek_Chaurasiya_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     toast.success("Resume download initiated! 📄");
   };
 
@@ -86,10 +92,10 @@ const Hero = () => {
           </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+          <div className="flex flex-row items-center gap-3 sm:gap-4 mb-10 w-full sm:w-auto">
             <button
               onClick={handleDownloadResume}
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] transition-all cursor-pointer"
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 sm:gap-2.5 px-4 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-700 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap rounded-lg shadow-sm"
             >
               <Download className="w-4 h-4 stroke-[2.5]" />
               <span>Download Resume</span>
@@ -97,7 +103,7 @@ const Hero = () => {
 
             <button
               onClick={scrollToContact}
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 text-sm font-bold text-gray-900 bg-white hover:bg-emerald-50 hover:text-emerald-700 border border-gray-300 hover:border-emerald-600 active:scale-[0.98] transition-all cursor-pointer"
+              className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 sm:gap-2.5 px-4 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-gray-900 bg-white hover:bg-emerald-50 hover:text-emerald-700 border border-gray-300 hover:border-emerald-600 active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap rounded-lg shadow-sm"
             >
               <Mail className="w-4 h-4" />
               <span>Contact Me</span>

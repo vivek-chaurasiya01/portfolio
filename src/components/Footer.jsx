@@ -46,8 +46,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-10 border-b border-gray-200">
           
           {/* Column 1: Brand Logo, Bio & Social Links */}
-          <div className="md:col-span-5 space-y-5">
-            <div className="flex items-center">
+          <div className="md:col-span-5 space-y-5 flex flex-col items-center md:items-start text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start">
               <img
                 src="/logo.png"
                 alt="Vivek Chaurasiya"
@@ -55,17 +55,17 @@ const Footer = () => {
               />
             </div>
 
-            <p className="text-sm text-gray-600 leading-relaxed max-w-md">
+            <p className="text-sm text-gray-600 leading-relaxed max-w-md mx-auto md:mx-0">
               Full Stack <strong className="text-gray-900">MERN &amp; Flutter Developer</strong> crafting scalable web portals, backend APIs, and cross-platform mobile apps with clean code and modern UI/UX.
             </p>
 
             {/* Social Media Links */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 pt-1">
               <a
-                href="https://github.com"
+                href="https://github.com/vivek-chaurasiya01"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-900 hover:border-gray-900 transition-all"
+                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-gray-900 hover:border-gray-900 transition-all shadow-sm"
                 aria-label="GitHub Profile"
                 title="GitHub"
               >
@@ -76,7 +76,7 @@ const Footer = () => {
                 href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#0a66c2] hover:border-[#0a66c2] transition-all"
+                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-[#0a66c2] hover:border-[#0a66c2] transition-all shadow-sm"
                 aria-label="LinkedIn Profile"
                 title="LinkedIn"
               >
@@ -87,7 +87,7 @@ const Footer = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-emerald-600 hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-all"
+                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-emerald-600 hover:text-white hover:bg-[#25D366] hover:border-[#25D366] transition-all shadow-sm"
                 aria-label="WhatsApp"
                 title="WhatsApp (+91 7068767516)"
               >
@@ -98,7 +98,7 @@ const Footer = () => {
                 href={instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-rose-600 hover:text-white hover:bg-[#E1306C] hover:border-[#E1306C] transition-all"
+                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-rose-600 hover:text-white hover:bg-[#E1306C] hover:border-[#E1306C] transition-all shadow-sm"
                 aria-label="Instagram Profile"
                 title="Instagram"
               >
@@ -107,7 +107,7 @@ const Footer = () => {
 
               <a
                 href="mailto:vivekchaurasiya.dev@gmail.com"
-                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-emerald-600 hover:border-emerald-600 transition-all"
+                className="w-10 h-10 rounded-lg border border-gray-200 bg-white flex items-center justify-center text-gray-700 hover:text-white hover:bg-emerald-600 hover:border-emerald-600 transition-all shadow-sm"
                 aria-label="Email"
                 title="Email"
               >
@@ -117,17 +117,17 @@ const Footer = () => {
           </div>
 
           {/* Column 2: Quick Navigation */}
-          <div className="md:col-span-3 space-y-4">
+          <div className="md:col-span-3 space-y-4 text-center md:text-left">
             <h4 className="text-xs font-mono font-bold text-gray-900 uppercase tracking-wider">
               Quick Links
             </h4>
-            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5">
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 max-w-xs mx-auto md:mx-0">
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   type="button"
                   onClick={(e) => scrollToSection(e, link.id)}
-                  className="text-xs sm:text-sm font-medium text-gray-600 hover:text-emerald-600 text-left transition-colors cursor-pointer"
+                  className="text-xs sm:text-sm font-medium text-gray-600 hover:text-emerald-600 text-center md:text-left transition-colors cursor-pointer"
                 >
                   {link.name}
                 </button>
@@ -136,12 +136,12 @@ const Footer = () => {
           </div>
 
           {/* Column 3: Direct Connect (Call Now & WhatsApp) + Location */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="md:col-span-4 space-y-4 text-center md:text-left">
             <h4 className="text-xs font-mono font-bold text-gray-900 uppercase tracking-wider">
               Direct Connect
             </h4>
 
-            <div className="space-y-2.5 text-xs sm:text-sm text-gray-600">
+            <div className="space-y-2.5 text-xs sm:text-sm text-gray-600 flex flex-col items-center md:items-start">
               <div className="flex items-center gap-2.5">
                 <MapPin className="w-4 h-4 text-emerald-600 shrink-0" />
                 <span>Lucknow, Uttar Pradesh, India</span>
@@ -156,15 +156,15 @@ const Footer = () => {
             </div>
 
             {/* Call Now & WhatsApp Quick Action Buttons */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 max-w-sm mx-auto md:mx-0">
               <a
                 href={phoneHref}
-                className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition-all group"
+                className="flex items-center justify-center md:justify-start gap-2.5 px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-emerald-500 hover:bg-emerald-50/50 transition-all shadow-sm group"
               >
                 <div className="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white flex items-center justify-center transition-colors shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 text-left">
                   <div className="text-[10px] font-mono font-bold uppercase text-gray-400">Call Now</div>
                   <div className="text-xs font-bold text-gray-900 truncate">+91 7068767516</div>
                 </div>
@@ -174,12 +174,12 @@ const Footer = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-[#25D366] hover:bg-emerald-50/50 transition-all group"
+                className="flex items-center justify-center md:justify-start gap-2.5 px-4 py-3 rounded-xl bg-white border border-gray-200 hover:border-[#25D366] hover:bg-emerald-50/50 transition-all shadow-sm group"
               >
                 <div className="w-9 h-9 rounded-lg bg-emerald-50 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white flex items-center justify-center transition-colors shrink-0">
                   <FaWhatsapp className="w-5 h-5" />
                 </div>
-                <div className="min-w-0">
+                <div className="min-w-0 text-left">
                   <div className="text-[10px] font-mono font-bold uppercase text-gray-400">WhatsApp</div>
                   <div className="text-xs font-bold text-gray-900 truncate">+91 7068767516</div>
                 </div>
@@ -190,7 +190,7 @@ const Footer = () => {
         </div>
 
         {/* Sub-Footer: Copyright & Back to Top */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-gray-500 text-center sm:text-left">
           <div>
             © {new Date().getFullYear()} <strong className="text-gray-900 font-bold">Vivek Chaurasiya</strong> • All rights reserved.
           </div>
