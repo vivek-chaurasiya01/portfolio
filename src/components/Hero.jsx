@@ -3,9 +3,10 @@ import React, { useRef } from 'react';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ArrowRight, Code2, Download, Mail, Briefcase, FolderGit2, Layers, Zap } from 'lucide-react';
+import { ArrowRight, Code2, Download, Mail, Phone } from 'lucide-react';
 import { TypeAnimation } from 'react-type-animation';
 import { GithubIcon, LinkedinIcon } from './common/TechIcons';
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa6';
 import { toast } from 'react-toastify';
 
 const Hero = () => {
@@ -103,54 +104,69 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Bottom Strip: Socials + Quick Stats */}
-          <div className="pt-6 border-t border-gray-100 w-full space-y-4">
+          {/* Bottom Strip: Socials Icons */}
+          <div className="pt-6 border-t border-gray-100 w-full">
 
-            {/* Social Buttons Row */}
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-mono font-bold text-gray-400 uppercase tracking-widest hidden sm:block">Connect</span>
+            {/* Social Icons Row */}
+            <div className="flex items-center gap-3">
+              
+              {/* WhatsApp */}
               <a
-                href="https://github.com/vivekchaurasiya"
+                href="https://wa.me/917068767516"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-900 hover:bg-gray-700 text-white text-sm font-semibold border border-gray-800 transition-all shadow-sm"
+                aria-label="WhatsApp"
+                title="WhatsApp (+91 7068767516)"
+                className="w-10 h-10 rounded-full bg-emerald-50 hover:bg-[#25D366] text-[#25D366] hover:text-white border border-emerald-200 hover:border-[#25D366] flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
-                <GithubIcon className="w-4 h-4" />
-                <span>GitHub</span>
+                <FaWhatsapp className="w-5 h-5" />
               </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/vivek_chaurasiya2332?utm_source=ig_web_button_share_sheet&knvt=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+                title="Instagram (@vivek_chaurasiya2332)"
+                className="w-10 h-10 rounded-full bg-pink-50 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] text-[#e1306c] hover:text-white border border-pink-200 hover:border-transparent flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+              >
+                <FaInstagram className="w-5 h-5" />
+              </a>
+
+              {/* Call Now */}
+              <a
+                href="tel:+917068767516"
+                aria-label="Call Now"
+                title="Call Now (+91 7068767516)"
+                className="w-10 h-10 rounded-full bg-emerald-50 hover:bg-emerald-600 text-emerald-700 hover:text-white border border-emerald-200 hover:border-emerald-600 flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+              >
+                <Phone className="w-4 h-4" />
+              </a>
+
+              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/vivek-chaurasiya-84919029b"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#0a66c2] hover:bg-[#004182] text-white text-sm font-semibold border border-[#0a66c2] transition-all shadow-sm"
+                aria-label="LinkedIn"
+                title="LinkedIn Profile"
+                className="w-10 h-10 rounded-full bg-sky-50 hover:bg-[#0a66c2] text-[#0a66c2] hover:text-white border border-sky-200 hover:border-[#0a66c2] flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
               >
                 <LinkedinIcon className="w-4 h-4" />
-                <span>LinkedIn</span>
               </a>
-              <a
-                href="mailto:vivekchaurasiya.dev@gmail.com"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-600 hover:text-white text-emerald-800 text-sm font-semibold border border-emerald-200 hover:border-emerald-600 transition-all shadow-sm"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Email Me</span>
-              </a>
-            </div>
 
-            {/* Quick Stats Chips */}
-            <div className="flex flex-wrap items-center gap-2.5">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-semibold text-gray-700">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Available for Work
-              </div>
-              <div className="px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-semibold text-gray-700">
-                🚀 1.5+ Yrs Experience
-              </div>
-              <div className="px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-semibold text-gray-700">
-                📦 20+ Projects
-              </div>
-              <div className="px-3 py-1.5 rounded-full bg-gray-50 border border-gray-200 text-xs font-semibold text-gray-700">
-                🛠 18+ Technologies
-              </div>
+              {/* GitHub */}
+              <a
+                href="https://github.com/vivek-chaurasiya01"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GitHub"
+                title="GitHub Profile"
+                className="w-10 h-10 rounded-full bg-gray-50 hover:bg-gray-900 text-gray-800 hover:text-white border border-gray-200 hover:border-gray-900 flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+              >
+                <GithubIcon className="w-4 h-4" />
+              </a>
             </div>
 
           </div>
@@ -161,7 +177,7 @@ const Hero = () => {
         <div className="hero-image-anim lg:col-span-5 flex justify-center lg:justify-end">
           <div className="max-w-[420px] w-full">
             <img
-              src="/563533e7-57db-4829-8fb4-cdb11255cb67.png"
+              src="/image copy 8.png"
               alt="Vivek Chaurasiya - MERN Stack & Flutter Developer"
               className="w-full h-auto object-cover object-center select-none"
             />

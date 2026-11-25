@@ -56,7 +56,7 @@ const AboutSection = () => {
         
         {/* LEFT COLUMN: Custom Generated Illustration */}
         <div className="lg:col-span-5 flex flex-col items-center">
-          <div className="w-full max-w-[460px] overflow-hidden rounded-2xl bg-white">
+          <div className="w-full max-w-[460px] overflow-hidden rounded-2xl bg-white border border-gray-100 shadow-[0_8px_30px_rgba(15,23,42,0.08)] hover:shadow-[0_16px_36px_rgba(5,150,105,0.12)] transition-shadow duration-300">
             <img
               src="/about-illustration.jpg"
               alt="Vivek Chaurasiya - Full Stack & Flutter Architecture"
@@ -80,7 +80,7 @@ const AboutSection = () => {
           </div>
 
           {/* Career Goals */}
-          <div className="p-4 sm:p-5 rounded-xl bg-emerald-50/50 border border-emerald-100 space-y-1.5">
+          <div className="p-4 sm:p-5 rounded-xl bg-emerald-50/50 border border-emerald-100 space-y-1.5 shadow-[0_4px_18px_rgba(15,23,42,0.04)] hover:shadow-[0_8px_24px_rgba(5,150,105,0.08)] transition-all">
             <div className="flex items-center gap-2 text-emerald-700 font-semibold text-sm">
               <Target className="w-4 h-4" />
               <span>Career Goal</span>
@@ -97,7 +97,7 @@ const AboutSection = () => {
               return (
                 <div
                   key={idx}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-gray-50/80 border border-gray-100 hover:border-emerald-200 transition-colors"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-white border border-gray-200/80 shadow-[0_4px_18px_rgba(15,23,42,0.06)] hover:border-emerald-300 hover:shadow-[0_10px_28px_rgba(5,150,105,0.12)] transition-all duration-200"
                 >
                   <div className="w-9 h-9 rounded-lg bg-emerald-100/70 text-emerald-700 flex items-center justify-center shrink-0">
                     <Icon className="w-4 h-4" />
